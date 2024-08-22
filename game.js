@@ -25,7 +25,7 @@ class Unit {
 
 class Player extends Unit {
   constructor() {
-    super(100, 10000, 3, 3.3, 1);
+    super(100, 100, 3, 3.3, 1);
 
     this.minOringinDamage = 3;
     this.damageMultiplier = 2;
