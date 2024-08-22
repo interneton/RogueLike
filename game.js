@@ -68,7 +68,7 @@ class Player extends Unit {
     while (this.currentExp >= this.maxExp) {
       let currentLevel = this.level;
       this.currentExp = Number((this.currentExp - this.maxExp).toFixed(1));
-      this.maxExp = Number((this.maxExp * 1.6).toFixed(1));
+      this.maxExp = Number((this.maxExp * 1.3).toFixed(1));
       this.level += 1;
 
       console.log(chalk.white(`레벨이 `) + chalk.yellow(`${currentLevel} -> ${this.level}`) + chalk.white.white(` 로 증가하였습니다!`));
