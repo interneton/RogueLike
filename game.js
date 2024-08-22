@@ -31,7 +31,7 @@ class Player extends Unit {
     this.damageMultiplier = 2;
     this.defenseProbability = 20;
     this.runAwayProbability = 25;
-    this.comboAttackProbability = 15;
+    this.comboAttackProbability = 25;
 
     this.currentExp = 0;
     this.maxExp = 6;
@@ -76,15 +76,15 @@ class Player extends Unit {
       console.log(chalk.yellow("\n                              증가할 능력치를 선택하세요 !"));
       console.log(chalk.gray("=================================================================================================\n") +
         chalk.yellow(
-          `1. 공격력 +2.5   2. 체력 +20   3. 최대 공격력 배수 +0.5   4. 연속 공격 확률 +5%   5. 방어 확률 +4%`,
+          `1. 공격력 +3   2. 체력 +20   3. 최대 공격력 배수 +0.5   4. 연속 공격 확률 +8%   5. 방어 확률 +5%`,
         ) + chalk.gray("\n================================================================================================="));
 
       const choice = readlineSync.question();
 
       switch (choice) {
         case '1':
-          this.minOringinDamage += 2.5;
-          console.log(chalk.white(`공격력이`) + chalk.yellow(`2.5`) + chalk.white(`증가하였습니다!`));
+          this.minOringinDamage += 3;
+          console.log(chalk.white(`공격력이`) + chalk.yellow(`3`) + chalk.white(`증가하였습니다!`));
           break;
         case '2':
           this.maxHp += 20;
@@ -95,12 +95,12 @@ class Player extends Unit {
           console.log(chalk.white(`최대 공격력 배수가`) + chalk.yellow(`0.5`) + chalk.white(`증가하였습니다!`));
           break;
         case '4':
-          this.comboAttackProbability += 5;
-          console.log(chalk.white(`연속 공격력 확률이`) + chalk.yellow(`5%`) + chalk.white(`증가하였습니다!`));
+          this.comboAttackProbability += 8;
+          console.log(chalk.white(`연속 공격력 확률이`) + chalk.yellow(`8%`) + chalk.white(`증가하였습니다!`));
           break;
         case '5':
-          this.defenseProbability += 4;
-          console.log(chalk.white(`방어 확률이`) + chalk.yellow(`4%`) + chalk.white(`하였습니다!`));
+          this.defenseProbability += 5;
+          console.log(chalk.white(`방어 확률이`) + chalk.yellow(`5%`) + chalk.white(`하였습니다!`));
           break;
       }
 
